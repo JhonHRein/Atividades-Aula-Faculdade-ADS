@@ -201,7 +201,7 @@ button[type="submit"]:hover {
     color: var(--cor-footer);
 }
 
-/* 1. Badges (Etiquetas) */
+/*Badges (Etiquetas) */
 .badge {
     display: inline-block;
     font-size: var(--font-xs);
@@ -222,7 +222,7 @@ button[type="submit"]:hover {
     color: var(--cor-footer);
 }
 
-/* 2. Caixa de Alerta */
+/*Caixa de Alerta */
 .alerta {
     grid-column: span 12;
     padding: var(--spacing-md);
@@ -316,4 +316,30 @@ button:focus-visible,
 nav a:focus-visible {
     outline: 3px solid #0056b3 !important;
     outline-offset: 2px !important;
+}
+
+/*TEMA DE ALTO CONTRASTE (WCAG 1.4.3 - Contraste Mínimo 4.5:1)*/
+
+body.alto-contraste {
+    --cor-fundo: #000000;
+    --cor-cabecalho: #000000;
+    --cor-destaques: #ffff00;
+    --cor-conteudo: #000000;
+    --cor-footer: #000000;
+    --cor-card: #121212;
+    --cor-texto-link: #ffff00;
+    --cor-hover: #ffffff;
+    --cor-nav-fundo: #121212;
+}
+
+body.alto-contraste main p,
+body.alto-contraste label,
+body.alto-contraste header h1 {
+    color: #ffffff !important;
+}
+
+body.alto-contraste main h2,
+body.alto-contraste main h3 {
+    color: #ffff00 !important;
+    background-image: none !important;
 }
