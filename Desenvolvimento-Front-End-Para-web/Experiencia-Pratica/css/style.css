@@ -286,3 +286,34 @@ button[type="submit"]:hover {
         max-width: 1200px;
     }
 }
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--cor-footer);
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    z-index: 1000;
+    transition: top 0.2s ease;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--cor-hover);
+}
+
+
+*:focus-visible {
+    outline: 3px solid #0056b3 !important;
+    outline-offset: 2px !important;
+}
+
+
+input:focus-visible, 
+button:focus-visible, 
+nav a:focus-visible {
+    outline: 3px solid #0056b3 !important;
+    outline-offset: 2px !important;
+}
