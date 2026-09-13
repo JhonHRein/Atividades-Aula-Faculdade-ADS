@@ -8,9 +8,12 @@
     <title>Instituto Conecta - SPA</title>
 </head>
 <body>
+    <!-- Atalho de acessibilidade para ir direto ao conteúdo principal -->
+    <a href="#app" class="skip-link" style="position: absolute; left: -9999px;">Pular para o conteúdo principal</a>
+
     <header>
         <h1>INSTITUTO CONECTA</h1>
-        <nav>
+        <nav aria-label="Navegação principal">
             <ul>
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#projetos">Projetos</a></li>
@@ -19,9 +22,11 @@
         </nav>
     </header>
     
-    <main id="app"></main>
+    <!-- Elemento principal identificado como região com rótulo WAI-ARIA -->
+    <main id="app" role="region" aria-label="Conteúdo dinâmico da aplicação"></main>
 
-    <div class="toast" id="toast-global" style="display: none;">
+    <!-- Notificação acessível utilizando região dinâmica WAI-ARIA -->
+    <div class="toast" id="toast-global" role="status" aria-live="polite" style="display: none;">
         <span class="toast-mensagem" id="toast-texto">Ambiente carregado.</span>
     </div>
 
