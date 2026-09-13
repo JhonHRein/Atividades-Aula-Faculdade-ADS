@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/faviconONGads.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Instituto Conecta - SPA</title>
+</head>
+<body>
+    <header>
+        <h1>INSTITUTO CONECTA</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#cadastro">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="app"></main>
+
+    <div class="toast" id="toast-global" style="display: none;">
+        <span class="toast-mensagem" id="toast-texto">Ambiente carregado.</span>
+    </div>
+
+    <footer>
+        <p>
+            E-mail: contato@conectaacao.org.br | Telefone: (11) 5555-7777
+        </p>
+    </footer>
+    
+    <!-- 1. Biblioteca Externa -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- 2. Ponto de entrada modular da aplicação -->
+    <script type="module" src="js/app.js"></script>
+    
+</body>
+</html>
