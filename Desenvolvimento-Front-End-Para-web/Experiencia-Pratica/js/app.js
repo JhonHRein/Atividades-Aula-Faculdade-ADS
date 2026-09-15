@@ -1,29 +1,37 @@
-// js/app.js
+
 import { templates } from './templates.js';
 import { salvarCadastro, carregarDadosSalvos } from './storage.js';
 
+
 const rotas = {
     '#inicio': templates.inicio,
+    '#/inicio': templates.inicio,
     '#projetos': templates.projetos,
-    '#cadastro': templates.cadastro
+    '#/projetos': templates.projetos,
+    '#cadastro': templates.cadastro,
+    '#/cadastro': templates.cadastro
 };
 
 function navegar() {
+    
     const hash = window.location.hash || '#inicio';
     const renderizar = rotas[hash] || templates.inicio;
     
     const appContainer = document.getElementById('app');
     appContainer.innerHTML = renderizar();
 
-    if (hash === '#cadastro') {
+    
+    if (hash === '#cadastro' || hash === '#/cadastro') {
         carregarDadosSalvos();
     }
 }
+
 
 window.addEventListener('hashchange', navegar);
 window.addEventListener('DOMContentLoaded', navegar);
 
 const appContainer = document.getElementById('app');
+
 
 appContainer.addEventListener('submit', (event) => {
     if (event.target && event.target.id === 'form-cadastro') {

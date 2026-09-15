@@ -15,7 +15,20 @@ export const templates = {
             <h3>Quem somos</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dignissimos nisi necessitatibus sequi libero expedita commodi...</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum recusandae tempora nemo ex nihil distinctio esse praesentium...</p>
-            <img src="img/conecta500g.png" alt="Foto dos colaboradores da ONG.">
+            
+            <!-- Otimização de Imagens: Tag <picture> com WebP, srcset para 250px/500px e fallback PNG -->
+            <picture>
+                <source 
+                    srcset="img/conecta250g.webp 250w, img/conecta500g.webp 500w" 
+                    sizes="(max-width: 600px) 250px, 500px" 
+                    type="image/webp">
+                <img 
+                    src="img/conecta500g.png" 
+                    alt="Foto dos colaboradores da ONG." 
+                    width="500" 
+                    height="300" 
+                    loading="lazy">
+            </picture>
         </section>
     `,
 
