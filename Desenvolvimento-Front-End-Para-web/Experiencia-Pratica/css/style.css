@@ -81,7 +81,7 @@ nav a {
     text-decoration: none;
     padding: var(--spacing-xs);
     border-radius: 5px;
-    transition: all 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
@@ -342,4 +342,46 @@ body.alto-contraste main h2,
 body.alto-contraste main h3 {
     color: #ffff00 !important;
     background-image: none !important;
+}
+
+/* 1. Transições e Estados do Menu Mobile (.is-active) */
+nav ul {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+nav.is-active,
+nav ul.is-active {
+    display: flex !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 2. Validação Visual de Formulário (Sucesso e Erro) */
+.input--error,
+input.is-error {
+    border: 2px solid #d9534f !important;
+    background-color: #fdf7f7 !important;
+    color: #a94442;
+}
+
+.input--success,
+input.is-success {
+    border: 2px solid #28a745 !important;
+    background-color: #f4faf5 !important;
+}
+
+/* Mensagens de feedback acessíveis do formulário */
+.feedback-message {
+    font-size: var(--font-xs);
+    margin-top: 4px;
+    font-weight: bold;
+    display: block;
+}
+
+.feedback-message--error {
+    color: #d9534f;
+}
+
+.feedback-message--success {
+    color: #28a745;
 }
